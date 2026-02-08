@@ -1,65 +1,77 @@
-import Image from "next/image";
+"use client";
+
+import { Navbar } from "@/components/Navbar";
+import { Hero } from "@/components/Hero";
+import { TechArsenal } from "@/components/TechArsenal";
+import { SocialConnect } from "@/components/SocialConnect";
+import { EngineeringBlueprint } from "@/components/EngineeringBlueprint";
+import { SectionHeading } from "@/components/SectionHeading";
+import { FeaturedHeading } from "@/components/FeaturedHeading";
+import { ProjectCard } from "@/components/ProjectCard";
+import { Footer } from "@/components/Footer";
+
+const projects = [
+  {
+    title: "MoltPulse",
+    category: "WEB DEVELOPMENT",
+    description: "An advanced platform for real-time tracking and monitoring of Solana-based AI agents. Features on-chain analytics, token verification, and a comprehensive dashboard for ecosystem insights.",
+    tags: ["Next.js", "Solana", "Tailwind CSS", "Framer Motion"],
+    links: { demo: "#" },
+  },
+  {
+    title: "Sumaafy AI",
+    category: "AI AGENTS",
+    description: "A comprehensive AI-driven solution for enhancing productivity and data analysis. Leverages modern LLMs to provide actionable insights and automated workflows.",
+    tags: ["React", "Python", "FastAPI", "OpenAI"],
+    links: { demo: "#" },
+  },
+  {
+    title: "SR Group",
+    category: "CORPORATE",
+    description: "A professional corporate website for SR Group, showcasing their diverse portfolio of services. Built with a focus on performance, SEO, and premium corporate aesthetics.",
+    tags: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
+    links: { demo: "#" },
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <main className="min-h-screen bg-[var(--background)]">
+      <Navbar />
+      
+      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
+        <Hero />
+      </div>
+
+      <TechArsenal />
+      <SocialConnect />
+
+      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
+      </div>
+
+      {/* Engineering Blueprint - Full Width */}
+      <EngineeringBlueprint />
+
+      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
+        {/* Projects Section */}
+        <section id="projects" className="py-32">
+          <FeaturedHeading 
+            subtitle="FEATURED WORK"
+            title="Projects &      " 
+            description="Explore both the user interface and the engineering architecture behind my featured applications."
+          />
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project, index) => (
+              <ProjectCard key={index} {...project} />
+            ))}
+          </div>
+        </section>
+
+        {/* Contact Section */}
+      </div>
+
+      <Footer />
+    </main>
   );
 }

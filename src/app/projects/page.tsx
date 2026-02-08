@@ -1,0 +1,141 @@
+"use client";
+
+import { useState } from "react";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
+import { ProjectCard } from "@/components/ProjectCard";
+import { ProjectsHeader } from "@/components/ProjectsHeader";
+import { Search } from "lucide-react";
+
+// Using the same project data or expanded list
+const allProjects = [
+  {
+    title: "MoltPulse",
+    category: "WEB DEVELOPMENT",
+    description: "An advanced platform for real-time tracking and monitoring of Solana-based AI agents. Features on-chain analytics, token verification, and a comprehensive dashboard for ecosystem insights.",
+    tags: ["Next.js", "Solana", "Tailwind CSS", "Framer Motion"],
+    links: { demo: "#" },
+  },
+  {
+    title: "Sumaafy AI",
+    category: "AI AGENTS",
+    description: "A comprehensive AI-driven solution for enhancing productivity and data analysis. Leverages modern LLMs to provide actionable insights and automated workflows.",
+    tags: ["React", "Python", "FastAPI", "OpenAI"],
+    links: { demo: "#" },
+  },
+  {
+    title: "SR Group",
+    category: "CORPORATE",
+    description: "A professional corporate website for SR Group, showcasing their diverse portfolio of services. Built with a focus on performance, SEO, and premium corporate aesthetics.",
+    tags: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
+    links: { demo: "#" },
+  },
+  {
+     title: "FileFlow",
+     category: "WEB DEVELOPMENT",
+     description: "A secure cloud storage web app inspired by Google Drive, featuring email verification, file uploading, and intuitive file management.",
+     tags: ["React", "Node.js", "Express.js", "Firebase"],
+     links: { demo: "#" },
+  },
+  {
+     title: "Gourmet Go",
+     category: "WEB DEVELOPMENT",
+     description: "A high-performance, visually stunning recipe discovery platform built with Next.js 15. Leveraging TheMealDB API.",
+     tags: ["Next.js", "Zustand", "Axios", "Tailwind"],
+     links: { demo: "#" },
+  }
+];
+
+const categories = ["All", "Web Development", "AI Agents", "Corporate", "App Dev"];
+
+export default function ProjectsPage() {
+  const [activeCategory, setActiveCategory] = useState("All");
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredProjects = allProjects.filter(project => {
+     const matchesCategory = activeCategory === "All" || project.category.toUpperCase() === activeCategory.toUpperCase();
+     const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                           project.description.toLowerCase().includes(searchQuery.toLowerCase());
+     return matchesCategory && matchesSearch;
+  });
+
+  return (
+    <main className="min-h-screen bg-[var(--background)]">
+      <Navbar />
+      
+      <div className="pt-32 pb-24 max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
+         
+         <ProjectsHeader 
+            title="Featured Projects" 
+            description="A collection of projects I've worked on, ranging from web applications to mobile apps and everything in between. Each project represents a unique challenge and learning experience."
+         />
+
+         {/* Filter & Search Bar */}
+         <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-12 bg-[#0a0b10] border border-white/5 p-2 rounded-2xl">
+            {/* Categories */}
+            <div className="flex overflow-x-auto w-full md:w-auto pb-2 md:pb-0 gap-2 no-scrollbar px-2">
+               {categories.map(cat => (
+                  <button
+                     key={cat}
+                     onClick={() => setActiveCategory(cat)}
+                     className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
+                        activeCategory === cat 
+                           ? "bg-primary text-slate-900 shadow-[0_0_15px_rgba(56,189,248,0.3)]" 
+                           : "bg-transparent text-slate-400 hover:text-white"
+                     }`}
+                  >
+                     {cat}
+                  </button>
+               ))}
+            </div>
+
+            {/* Search */}
+            <div className="relative w-full md:w-64 px-2">
+               <Search className="absolute left-5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
+               <input 
+                  type="text" 
+                  placeholder="Search projects..." 
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full bg-[#111] border border-slate-800 rounded-full py-2 pl-10 pr-4 text-sm text-white focus:outline-none focus:border-primary/50 transition-colors"
+               />
+            </div>
+         </div>
+
+         {/* Projects Grid */}
+         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 min-h-[400px]">
+            {filteredProjects.length > 0 ? (
+               filteredProjects.map((project, index) => (
+                  <ProjectCard key={index} {...project} />
+               ))
+            ) : (
+               <div className="col-span-full flex flex-col items-center justify-center text-slate-500 py-20">
+                  <p className="text-lg">No projects found matching your criteria.</p>
+                  <button 
+                     onClick={() => { setActiveCategory("All"); setSearchQuery(""); }}
+                     className="mt-4 text-primary hover:underline"
+                  >
+                     Clear filters
+                  </button>
+               </div>
+            )}
+         </div>
+
+         {/* Bottom CTA */}
+         <div className="mt-24 text-center">
+            <h3 className="text-2xl font-bold text-white mb-4">Have a project in mind?</h3>
+            <p className="text-slate-400 mb-8">Let's collaborate and build something amazing together.</p>
+            <a 
+               href="mailto:kartikgarg.cse.2025@gmail.com"
+               className="inline-block px-8 py-3 bg-white text-black font-bold rounded-full hover:bg-slate-200 transition-colors"
+            >
+               Start a Project
+            </a>
+         </div>
+
+      </div>
+
+      <Footer />
+    </main>
+  );
+}
