@@ -36,7 +36,7 @@ export function FeedbackWidget() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-8 right-8 z-50 p-4 bg-primary text-slate-900 rounded-full shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-shadow"
+        className="fixed bottom-8 right-8 z-50 p-4 bg-primary text-primary-foreground rounded-full shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-shadow"
       >
         <MessageSquarePlus className="w-6 h-6" />
       </motion.button>
@@ -62,7 +62,7 @@ export function FeedbackWidget() {
                {/* Close Button */}
                <button 
                   onClick={() => setIsOpen(false)}
-                  className="absolute top-4 right-4 p-2 text-slate-400 hover:text-white transition-colors rounded-full hover:bg-white/5"
+                  className="absolute top-4 right-4 p-2 text-muted-foreground hover:text-foreground transition-colors rounded-full hover:bg-muted/10"
                >
                   <X className="w-5 h-5" />
                </button>

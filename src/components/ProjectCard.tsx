@@ -50,24 +50,24 @@ export function ProjectCard({ title, category, description, tags, links, image }
             </div>
         ) : (
             <>
-               <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-950 to-black opacity-80" />
-               <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.1),transparent_50%)]" />
+               <div className="absolute inset-0 bg-gradient-to-br from-card-bg via-muted to-background opacity-80" />
+               <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_50%_50%,var(--grid-line),transparent_50%)]" />
             </>
         )}
 
         <div className="absolute inset-0 flex items-center justify-center z-10">
-            <h3 className="text-3xl font-bold text-foreground/80 tracking-tighter uppercase select-none group-hover:text-primary/20 transition-colors duration-500 drop-shadow-lg">
+            <h3 className="text-3xl font-bold text-muted-foreground/50 tracking-tighter uppercase select-none group-hover:text-primary/20 transition-colors duration-500 drop-shadow-lg">
               {title}
             </h3>
         </div>
 
         {/* X-Ray Badge */}
         <div className="absolute top-4 left-4 flex gap-2">
-            <div className="px-3 py-1 bg-black/60 backdrop-blur-md border border-white/10 rounded-full text-[10px] font-mono text-cyan-400 uppercase tracking-wider flex items-center gap-2 shadow-xl">
-               <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
+            <div className="px-3 py-1 bg-background/60 backdrop-blur-md border border-border rounded-full text-[10px] font-mono text-primary uppercase tracking-wider flex items-center gap-2 shadow-xl">
+               <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
                Featured
             </div>
-            <div className="px-3 py-1 bg-black/60 backdrop-blur-md border border-white/10 rounded-full text-[10px] font-mono text-slate-300 uppercase tracking-wider shadow-xl">
+            <div className="px-3 py-1 bg-background/60 backdrop-blur-md border border-border rounded-full text-[10px] font-mono text-muted-foreground uppercase tracking-wider shadow-xl">
                {category}
             </div>
         </div>

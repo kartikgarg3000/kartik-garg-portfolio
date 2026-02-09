@@ -27,9 +27,9 @@ export function ContactForm() {
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="w-20 h-20 bg-cyan-500 rounded-2xl mx-auto mb-8 flex items-center justify-center shadow-[0_0_40px_-10px_rgba(6,182,212,0.5)]"
+            className="w-20 h-20 bg-primary rounded-2xl mx-auto mb-8 flex items-center justify-center shadow-[0_0_40px_-10px_rgba(var(--primary),0.5)]"
          >
-            <MessageSquare className="w-10 h-10 text-white fill-current" />
+            <MessageSquare className="w-10 h-10 text-primary-foreground fill-current" />
          </motion.div>
          
          <motion.div
@@ -37,11 +37,11 @@ export function ContactForm() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
          >
-            <h2 className="text-cyan-500 font-mono text-sm tracking-widest mb-4 uppercase">Get In Touch</h2>
+            <h2 className="text-primary font-mono text-sm tracking-widest mb-4 uppercase">Get In Touch</h2>
             <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 tracking-tight">
-               Let&apos;s <span className="text-cyan-500">Connect</span>
+               Let&apos;s <span className="text-primary">Connect</span>
             </h1>
-            <p className="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
                Have a project in mind? Want to collaborate? Or just want to say hello? I&apos;d love to hear from you. Fill out the form below and I&apos;ll get back to you as soon as possible.
             </p>
          </motion.div>

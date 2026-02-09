@@ -81,7 +81,7 @@ export function Footer() {
 
           {/* Navigation */}
           <div>
-            <h3 className="text-sm font-bold text-slate-200 uppercase tracking-wider mb-6 flex items-center gap-2">
+            <h3 className="text-sm font-bold text-foreground uppercase tracking-wider mb-6 flex items-center gap-2">
                <span className="w-6 h-px bg-primary" /> Navigation
             </h3>
             <ul className="space-y-3">
@@ -93,7 +93,7 @@ export function Footer() {
                 { name: "Contact", href: "#contact" },
               ].map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-slate-400 hover:text-primary transition-colors text-sm">
+                  <Link href={link.href} className="text-muted-foreground hover:text-primary transition-colors text-sm">
                     {link.name}
                   </Link>
                 </li>
@@ -103,8 +103,8 @@ export function Footer() {
 
           {/* Resources */}
           <div>
-            <h3 className="text-sm font-bold text-slate-200 uppercase tracking-wider mb-6 flex items-center gap-2">
-               <span className="w-6 h-px bg-emerald-500" /> Resources
+            <h3 className="text-sm font-bold text-foreground uppercase tracking-wider mb-6 flex items-center gap-2">
+               <span className="w-6 h-px bg-accent" /> Resources
             </h3>
             <ul className="space-y-3">
               {[
@@ -115,7 +115,7 @@ export function Footer() {
                 // { name: "Sitemap", href: "#" },
               ].map((link: { name: string; href: string; icon?: string }) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-slate-400 hover:text-emerald-400 transition-colors text-sm flex items-center gap-2">
+                  <Link href={link.href} className="text-muted-foreground hover:text-accent transition-colors text-sm flex items-center gap-2">
                     {link.icon && <span>{link.icon}</span>}
                     {link.name}
                   </Link>
@@ -126,15 +126,15 @@ export function Footer() {
 
           {/* Help Improve */}
           <div>
-             <h3 className="text-sm font-bold text-slate-200 uppercase tracking-wider mb-6 flex items-center gap-2">
+             <h3 className="text-sm font-bold text-foreground uppercase tracking-wider mb-6 flex items-center gap-2">
                <span className="w-6 h-px bg-purple-500" /> Help Improve
             </h3>
-            <p className="text-slate-500 text-sm mb-4 leading-relaxed">
+            <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
                Found a bug or have a feature suggestion? Let me know!
             </p>
             <button 
                onClick={() => setIsModalOpen(true)}
-               className="inline-flex items-center gap-2 px-4 py-3 bg-slate-900 border border-dashed border-slate-700 rounded-lg text-sm text-primary hover:bg-slate-800 hover:border-primary/50 transition-all w-full justify-center group"
+               className="inline-flex items-center gap-2 px-4 py-3 bg-card-bg border border-dashed border-border rounded-lg text-sm text-primary hover:bg-accent/10 hover:border-primary/50 transition-all w-full justify-center group"
             >
                <Bug className="w-4 h-4 group-hover:animate-bounce" /> Report Bug / Suggest Feature
             </button>
@@ -149,9 +149,9 @@ export function Footer() {
               Made with <span className="text-red-500 animate-pulse">❤</span> and <span className="text-amber-500">☕</span> by <span className="text-foreground font-medium">Kartik Garg</span>
            </div>
            
-           <div className="flex gap-4 text-xs text-slate-600">
-              <Link href="#" className="hover:text-slate-400 transition-colors">Privacy</Link>
-              <Link href="#" className="hover:text-slate-400 transition-colors">Terms</Link>
+           <div className="flex gap-4 text-xs text-muted-foreground">
+              <Link href="#" className="hover:text-foreground transition-colors">Privacy</Link>
+              <Link href="#" className="hover:text-foreground transition-colors">Terms</Link>
            </div>
         </div>
       </div>
