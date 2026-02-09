@@ -41,6 +41,16 @@ const allProjects = [
        github: "https://github.com/kartikgarg3000/SR-Group"
     },
     image: "/projects/sr.png"
+  },
+  {
+    title: "This Website - Portfolio",
+    category: "WEB DEVELOPMENT",
+    description: "My personal portfolio website built with Next.js, Tailwind CSS, and Framer Motion. Features a custom engineering blueprint design, dark/light mode, and a fully functional blog system.",
+    tags: ["Next.js", "React", "Tailwind CSS", "Framer Motion", "TypeScript"],
+    links: { 
+       demo: "https://kartik-garg-portfolio.vercel.app/"
+    },
+    image: "/projects/portfolio.png"
   }
 ];
 

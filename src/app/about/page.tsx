@@ -4,6 +4,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { AboutHero } from "@/components/AboutHero";
 import { ExperienceTimeline } from "@/components/ExperienceTimeline";
+import { Patents } from "@/components/Patents";
 import { AboutCTA } from "@/components/AboutCTA";
 
 export default function AboutPage() {
@@ -13,6 +14,7 @@ export default function AboutPage() {
       
       <AboutHero />
       <ExperienceTimeline />
+      <Patents />
       
       <AboutCTA />
       

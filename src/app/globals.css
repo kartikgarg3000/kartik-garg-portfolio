@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 :root {
   /* Light Mode Defaults */
@@ -14,6 +15,8 @@
   --card-bg: #f8fafc;
   --card-border: rgba(0, 0, 0, 0.1);
   --border: rgba(0, 0, 0, 0.1);
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
 }
 
 
@@ -28,6 +31,8 @@
   --card-bg: #0a0b10;
   --card-border: rgba(255, 255, 255, 0.1);
   --border: rgba(255, 255, 255, 0.1);
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
 }
 
 @theme inline {
@@ -40,6 +45,8 @@
   --color-card-bg: var(--card-bg);
   --color-card-border: var(--card-border);
   --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
   --font-mono: "JetBrains Mono", "Fira Code", "Consolas", "Monaco", "Andale Mono", "Ubuntu Mono", monospace;
   --font-sans: "Inter", "Geist", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
 }
