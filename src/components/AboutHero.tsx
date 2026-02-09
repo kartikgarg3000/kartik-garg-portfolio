@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Mail } from "lucide-react";
-// import Image from "next/image";
+import Image from "next/image";
 
 export function AboutHero() {
   return (
@@ -67,13 +67,15 @@ export function AboutHero() {
               <div className="absolute inset-4 border border-dashed border-primary/20 rounded-full animate-[spin_15s_linear_infinite_reverse]" />
               
               {/* Image Container */}
-              <div className="absolute inset-8 rounded-full overflow-hidden border-4 border-card-bg shadow-2xl bg-slate-800 flex items-center justify-center">
-                 {/* Placeholder for Profile Image */}
-                 <div className="text-muted-foreground font-mono text-center px-4">
-                    [ Your Photo Here ]
-                    {/* Use <Image /> component with actual src */}
-                 </div>
-              </div>
+               <div className="absolute inset-8 rounded-full overflow-hidden border-4 border-card-bg shadow-2xl bg-slate-800 flex items-center justify-center">
+                  <Image 
+                     src="/profile.jpg"
+                     alt="Kartik Garg"
+                     fill
+                     className="object-cover"
+                     priority
+                  />
+               </div>
               
               {/* Floating Badge */}
               <div className="absolute -bottom-4 right-10 bg-card-bg border border-border px-4 py-2 rounded-lg shadow-xl flex items-center gap-3 animate-bounce">
