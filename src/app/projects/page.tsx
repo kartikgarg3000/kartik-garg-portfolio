@@ -13,36 +13,34 @@ const allProjects = [
     title: "MoltPulse",
     category: "WEB DEVELOPMENT",
     description: "An advanced platform for real-time tracking and monitoring of Solana-based AI agents. Features on-chain analytics, token verification, and a comprehensive dashboard for ecosystem insights.",
-    tags: ["Next.js", "Solana", "Tailwind CSS", "Framer Motion"],
-    links: { demo: "#" },
+    tags: ["Next.js", "Solana", "TypeScript","Supabase","Tailwind CSS", "Framer Motion"],
+    links: { 
+       demo: "https://molt-pulse.vercel.app/",
+       github: "https://github.com/kartikgarg3000/MoltPulse"
+    },
+    image: "/projects/moltpulse.png"
   },
   {
-    title: "Sumaafy AI",
+    title: "Summafy AI",
     category: "AI AGENTS",
-    description: "A comprehensive AI-driven solution for enhancing productivity and data analysis. Leverages modern LLMs to provide actionable insights and automated workflows.",
-    tags: ["React", "Python", "FastAPI", "OpenAI"],
-    links: { demo: "#" },
+    description: "A modern web application that transforms lengthy PDF documents into concise, actionable summaries using artificial intelligence. Powered by Google's Gemini AI, it offers a smart solution for extracting key insights.",
+    tags: ["Next.js 14", "TypeScript", "Tailwind CSS", "Gemini AI", "PostgreSQL", "Clerk"],
+    links: { 
+       demo: "https://summafy-ai.vercel.app/",
+       github: "https://github.com/kartikgarg3000/summafy-ai"
+    },
+    image: "/projects/summafy.png"
   },
   {
     title: "SR Group",
     category: "CORPORATE",
-    description: "A professional corporate website for SR Group, showcasing their diverse portfolio of services. Built with a focus on performance, SEO, and premium corporate aesthetics.",
-    tags: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
-    links: { demo: "#" },
-  },
-  {
-     title: "FileFlow",
-     category: "WEB DEVELOPMENT",
-     description: "A secure cloud storage web app inspired by Google Drive, featuring email verification, file uploading, and intuitive file management.",
-     tags: ["React", "Node.js", "Express.js", "Firebase"],
-     links: { demo: "#" },
-  },
-  {
-     title: "Gourmet Go",
-     category: "WEB DEVELOPMENT",
-     description: "A high-performance, visually stunning recipe discovery platform built with Next.js 15. Leveraging TheMealDB API.",
-     tags: ["Next.js", "Zustand", "Axios", "Tailwind"],
-     links: { demo: "#" },
+    description: "A production-ready corporate website built with Next.js App Router and Tailwind CSS. Integrated Sanity Headless CMS for independent content management of 50+ products. Features server-side data fetching, GROQ queries, and 40% faster page loads via image optimization.",
+    tags: ["Next.js","TypeScript", "Sanity CMS", "Tailwind CSS", "GROQ", "Vercel"],
+    links: { 
+       demo: "https://sr-group-two.vercel.app/",
+       github: "https://github.com/kartikgarg3000/SR-Group"
+    },
+    image: "/projects/sr.png"
   }
 ];
 

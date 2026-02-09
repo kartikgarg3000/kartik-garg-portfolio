@@ -5,30 +5,31 @@ import { Briefcase } from "lucide-react";
 
 const experiences = [
   {
-    company: "TechCorp Inc.",
-    role: "Senior Full Stack Developer",
-    date: "Jun 2022 — Present",
-    location: "San Francisco, CA (Remote)",
-    description: "Leading development of enterprise web applications serving millions of users. Architected scalable microservices using Node.js and Kubernetes.",
+    company: "SR Group",
+    role: "Freelance Web Developer",
+    date: "Nov 2025 - Jan 2026",
+    location: "Remote",
+    description: "Designed and developed a production-ready corporate website using Next.js App Router and Tailwind CSS for a multi-vertical business.",
     achievements: [
-        "Architected and built scalable microservices using Node.js and Kubernetes",
-        "Led a team of 5 developers in delivering key product features",
-        "Reduced page load time by 60% through performance optimization"
+        "Integrated Sanity Headless CMS, enabling non-technical teams to independently manage 50+ products and content.",
+        "Implemented server-side data fetching, GROQ queries, and image optimization, improving page load performance by 40%.",
+        "Delivered an SEO-friendly, scalable solution deployed on Vercel."
     ],
-    tags: ["React", "Node.js", "TypeScript", "PostgreSQL", "AWS"]
+    tags: ["Next.js", "React.js", "Tailwind CSS", "Sanity CMS", "Vercel"]
   },
   {
-    company: "Creative Solutions", 
-    role: "Frontend Developer",
-    date: "Jan 2020 — May 2022",
-    location: "New York, NY",
-    description: "Developed responsive and interactive user interfaces for e-commerce platforms.",
+    company: "Stratawiz",
+    role: "Software Developer (Internship)",
+    date: "Oct 2024 - Mar 2025",
+    location: "Remote",
+    description: "Worked on backend development using Node.js, AWS Lambda, and DynamoDB to build scalable, production-ready features.",
     achievements: [
-        "Implemented pixel-perfect UI designs from Figma prototypes",
-        "Integrated Stripe payment gateway for seamless checkout",
-        "Improved accessibility score to 98/100 across main pages"
+        "Implemented WhatsApp API-based campaign messaging, improving communication workflows across the platform.",
+        "Optimized backend logic and APIs, reducing server response times by ~25%.",
+        "Redesigned bot interaction flows, achieving ~90% message processing accuracy.",
+        "Collaborated with cross-functional teams to develop, test, and deploy modular campaign features."
     ],
-    tags: ["Vue.js", "Tailwind CSS", "JavaScript", "Firebase"]
+    tags: ["Node.js", "AWS Lambda", "DynamoDB", "API Development"]
   }
 ];
 
@@ -39,7 +40,7 @@ export function ExperienceTimeline() {
           <div className="inline-block px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-primary text-xs font-mono mb-4">
             Briefcase EXPERIENCE
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
             Professional <span className="text-primary">Journey</span>
           </h2>
           <p className="text-slate-400 mt-4 max-w-xl mx-auto">
@@ -49,7 +50,7 @@ export function ExperienceTimeline() {
 
       <div className="space-y-12 relative">
           {/* Vertical Line */}
-          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-slate-800 -translate-x-1/2 hidden md:block" />
+          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-border -translate-x-1/2 hidden md:block" />
 
           {experiences.map((exp, index) => (
              <motion.div 
@@ -61,26 +62,26 @@ export function ExperienceTimeline() {
                className={`relative flex flex-col md:flex-row gap-8 ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}
              >
                 {/* Timeline Dot */}
-                <div className="absolute left-0 md:left-1/2 top-0 w-4 h-4 bg-slate-900 border-2 border-primary rounded-full z-10 -translate-x-[5px] md:-translate-x-1/2 shadow-[0_0_10px_rgba(56,189,248,0.5)]" />
+                <div className="absolute left-0 md:left-1/2 top-0 w-4 h-4 bg-background border-2 border-primary rounded-full z-10 -translate-x-[5px] md:-translate-x-1/2 shadow-[0_0_10px_rgba(56,189,248,0.5)]" />
 
                 {/* Content Card */}
                 <div className="md:w-1/2 pl-8 md:pl-0">
-                   <div className={`bg-[#0f0f11] border border-slate-800 p-6 rounded-2xl hover:border-primary/30 transition-colors group ${index % 2 === 0 ? "md:ml-auto" : "md:mr-auto"}`}>
+                   <div className={`bg-card-bg border border-card-border p-6 rounded-2xl hover:border-primary/30 transition-colors group ${index % 2 === 0 ? "md:ml-auto" : "md:mr-auto"}`}>
                       <div className="flex items-center justify-between mb-4">
                          <span className="text-xs font-mono text-primary">{exp.date}</span>
-                         <Briefcase className="w-4 h-4 text-slate-500" />
+                         <Briefcase className="w-4 h-4 text-muted-foreground" />
                       </div>
                       
-                      <h3 className="text-xl font-bold text-white mb-1 group-hover:text-primary transition-colors">{exp.role}</h3>
-                      <div className="text-sm text-slate-400 mb-4">{exp.company} • {exp.location}</div>
+                      <h3 className="text-xl font-bold text-foreground mb-1 group-hover:text-primary transition-colors">{exp.role}</h3>
+                      <div className="text-sm text-muted-foreground mb-4">{exp.company} • {exp.location}</div>
                       
-                      <p className="text-slate-400 text-sm mb-4 leading-relaxed">
+                      <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
                          {exp.description}
                       </p>
 
                       <ul className="space-y-2 mb-6">
                          {exp.achievements.map((item, i) => (
-                            <li key={i} className="flex gap-2 text-sm text-slate-400">
+                            <li key={i} className="flex gap-2 text-sm text-muted-foreground">
                                <span className="text-primary mt-1">▹</span>
                                <span>{item}</span>
                             </li>
@@ -89,7 +90,7 @@ export function ExperienceTimeline() {
 
                       <div className="flex flex-wrap gap-2">
                          {exp.tags.map(tag => (
-                            <span key={tag} className="px-2 py-1 bg-slate-900 border border-slate-800 rounded text-[10px] text-slate-500">
+                            <span key={tag} className="px-2 py-1 bg-background border border-border rounded text-[10px] text-muted-foreground">
                                {tag}
                             </span>
                          ))}

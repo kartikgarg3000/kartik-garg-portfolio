@@ -18,10 +18,10 @@ export function ProjectsHeader({ title, description }: ProjectsHeaderProps) {
          <div className="inline-block px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-primary text-xs font-mono mb-4">
             MY WORK
          </div>
-         <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+         <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 tracking-tight">
             {title}
          </h1>
-         <p className="text-slate-400 text-lg leading-relaxed">
+         <p className="text-muted-foreground text-lg leading-relaxed">
             {description}
          </p>
        </motion.div>

@@ -25,7 +25,7 @@ export function FeaturedHeading({ title, subtitle, description }: FeaturedHeadin
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
         viewport={{ once: true }}
-        className="text-4xl md:text-5xl font-bold text-white tracking-tight"
+        className="text-4xl md:text-5xl font-bold text-foreground tracking-tight"
       >
         {title.split(" & ").map((part, i, arr) => (
           <span key={i}>
@@ -40,7 +40,7 @@ export function FeaturedHeading({ title, subtitle, description }: FeaturedHeadin
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
         viewport={{ once: true }}
-        className="text-slate-400 max-w-2xl mx-auto text-lg"
+        className="text-muted-foreground max-w-2xl mx-auto text-lg"
       >
         {description}
       </motion.p>

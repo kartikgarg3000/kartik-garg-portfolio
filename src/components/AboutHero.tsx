@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Mail } from "lucide-react";
-import Image from "next/image";
+// import Image from "next/image";
 
 export function AboutHero() {
   return (
@@ -21,24 +21,24 @@ export function AboutHero() {
              ABOUT ME
            </div>
            
-           <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight">
-             I'm <span className="text-primary">Kartik Garg</span>
+           <h1 className="text-5xl md:text-7xl font-bold text-foreground tracking-tight">
+             I&apos;m <span className="text-primary">Kartik Garg</span>
            </h1>
-           <h2 className="text-2xl md:text-3xl font-medium text-slate-400">
+           <h2 className="text-2xl md:text-3xl font-medium text-muted-foreground">
              Software Engineer & AI Focused Full Stack Developer
            </h2>
 
-           <p className="text-lg text-slate-400 leading-relaxed max-w-xl">
-             Hello! I'm Kartik Garg, a passionate Full-Stack Developer transforming complex ideas into elegant, high-performance web applications. My journey into coding began out of sheer curiosity, fascinated by how lines of text could create interactive digital worlds.
+           <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
+             Hello! I&apos;m Kartik Garg, a passionate Full-Stack Developer transforming complex ideas into elegant, high-performance web applications. My journey into coding began out of sheer curiosity, fascinated by how lines of text could create interactive digital worlds.
            </p>
 
            <div className="flex flex-wrap gap-4 pt-4">
-             <div className="flex flex-col gap-1 p-4 bg-[#111] border border-slate-800 rounded-xl min-w-[140px]">
-                <span className="text-xs font-mono text-slate-500 uppercase tracking-widest">Location</span>
-                <span className="text-white font-medium">India</span>
+             <div className="flex flex-col gap-1 p-4 bg-card-bg border border-border rounded-xl min-w-[140px]">
+                <span className="text-xs font-mono text-muted-foreground uppercase tracking-widest">Location</span>
+                <span className="text-foreground font-medium">India</span>
              </div>
-             <div className="flex flex-col gap-1 p-4 bg-[#111] border border-slate-800 rounded-xl min-w-[140px]">
-                <span className="text-xs font-mono text-slate-500 uppercase tracking-widest">Availability</span>
+             <div className="flex flex-col gap-1 p-4 bg-card-bg border border-border rounded-xl min-w-[140px]">
+                <span className="text-xs font-mono text-muted-foreground uppercase tracking-widest">Availability</span>
                 <span className="text-emerald-400 font-medium flex items-center gap-2">
                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                    Open to Work
@@ -48,7 +48,7 @@ export function AboutHero() {
 
            <a 
              href="mailto:kartikgarg.cse.2025@gmail.com"
-             className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-slate-900 font-bold rounded-full mt-6 hover:shadow-[0_0_20px_rgba(56,189,248,0.3)] transition-all transform hover:-translate-y-1"
+             className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-bold rounded-full mt-6 hover:shadow-[0_0_20px_rgba(56,189,248,0.3)] transition-all transform hover:-translate-y-1"
            >
              <Mail className="w-4 h-4" /> Get in Touch
            </a>
@@ -63,26 +63,26 @@ export function AboutHero() {
         >
            <div className="relative w-72 h-72 md:w-96 md:h-96">
               {/* Abstract Rings */}
-              <div className="absolute inset-0 border-2 border-slate-800 rounded-full animate-[spin_10s_linear_infinite]" />
+              <div className="absolute inset-0 border-2 border-border rounded-full animate-[spin_10s_linear_infinite]" />
               <div className="absolute inset-4 border border-dashed border-primary/20 rounded-full animate-[spin_15s_linear_infinite_reverse]" />
               
               {/* Image Container */}
-              <div className="absolute inset-8 rounded-full overflow-hidden border-4 border-[#0a0b10] shadow-2xl bg-slate-800 flex items-center justify-center">
+              <div className="absolute inset-8 rounded-full overflow-hidden border-4 border-card-bg shadow-2xl bg-slate-800 flex items-center justify-center">
                  {/* Placeholder for Profile Image */}
-                 <div className="text-slate-500 font-mono text-center px-4">
+                 <div className="text-muted-foreground font-mono text-center px-4">
                     [ Your Photo Here ]
                     {/* Use <Image /> component with actual src */}
                  </div>
               </div>
               
               {/* Floating Badge */}
-              <div className="absolute -bottom-4 right-10 bg-[#111] border border-slate-800 px-4 py-2 rounded-lg shadow-xl flex items-center gap-3 animate-bounce">
+              <div className="absolute -bottom-4 right-10 bg-card-bg border border-border px-4 py-2 rounded-lg shadow-xl flex items-center gap-3 animate-bounce">
                  <div className="p-2 bg-purple-500/10 rounded-md">
                     <span className="text-purple-400 font-bold">100k+</span>
                  </div>
                  <div className="text-xs">
-                    <div className="text-slate-400">Lines Code</div>
-                    <div className="text-white font-bold">Written</div>
+                    <div className="text-muted-foreground">Lines Code</div>
+                    <div className="text-foreground font-bold">Written</div>
                  </div>
               </div>
            </div>

@@ -12,7 +12,7 @@ export function SocialConnect() {
         {/* Current Focus Card */}
         <motion.div 
           whileHover={{ y: -5 }}
-          className="bg-[#0f0f11] p-8 rounded-2xl border border-white/5 relative overflow-hidden group"
+          className="bg-card-bg p-8 rounded-2xl border border-card-border relative overflow-hidden group"
         >
           <div className="absolute top-0 right-0 p-6 opacity-50 group-hover:opacity-100 transition-opacity">
             <ArrowUpRight className="w-5 h-5 text-orange-500" />
@@ -21,7 +21,7 @@ export function SocialConnect() {
              <Coffee className="w-6 h-6" />
           </div>
           <h4 className="text-orange-500 text-xs font-bold tracking-wider mb-2">CURRENT FOCUS</h4>
-          <p className="text-xl font-bold text-slate-200 leading-snug">
+          <p className="text-xl font-bold text-foreground leading-snug">
             Architecting Scalable Systems & AI Agents
           </p>
         </motion.div>
@@ -29,7 +29,7 @@ export function SocialConnect() {
         {/* Coding Vibe Card */}
         <motion.div 
           whileHover={{ y: -5 }}
-          className="bg-[#0f0f11] p-8 rounded-2xl border border-white/5 relative overflow-hidden group"
+          className="bg-card-bg p-8 rounded-2xl border border-card-border relative overflow-hidden group"
         >
           <div className="absolute top-0 right-0 p-6 opacity-50 group-hover:opacity-100 transition-opacity">
             <div className="flex gap-1 items-end h-4">
@@ -42,15 +42,15 @@ export function SocialConnect() {
              <Music className="w-6 h-6" />
           </div>
           <h4 className="text-purple-500 text-xs font-bold tracking-wider mb-2">CODING VIBE</h4>
-          <p className="text-xl font-bold text-slate-200 leading-snug">
+          <p className="text-xl font-bold text-foreground leading-snug">
             Lo-Fi Beats to Code/Relax To
           </p>
           <p className="text-sm text-slate-500 mt-1">Spotify • Lofi Girl</p>
         </motion.div>
 
         {/* Let's Connect Grid */}
-        <div className="bg-[#0f0f11] p-8 rounded-2xl border border-white/5">
-           <h4 className="text-white text-lg font-bold mb-6 border-l-4 border-primary pl-3 flex items-center gap-2">
+        <div className="bg-card-bg p-8 rounded-2xl border border-card-border">
+           <h4 className="text-foreground text-lg font-bold mb-6 border-l-4 border-primary pl-3 flex items-center gap-2">
              Let's Connect
            </h4>
            
@@ -61,7 +61,7 @@ export function SocialConnect() {
            </div>
            
            <div className="mt-4">
-              <SocialLink icon={<Code2 className="w-5 h-5" />} label="LeetCode" href="#" fullWidth />
+              <SocialLink icon={<Code2 className="w-5 h-5" />} label="LeetCode" href="https://leetcode.com/u/Kartikgarg___/" fullWidth />
            </div>
         </div>
 
@@ -70,19 +70,19 @@ export function SocialConnect() {
   );
 }
 
-function SocialLink({ icon, label, href, fullWidth = false }: { icon: any, label: string, href: string, fullWidth?: boolean }) {
+function SocialLink({ icon, label, href, fullWidth = false }: { icon: React.ReactNode, label: string, href: string, fullWidth?: boolean }) {
   return (
     <Link 
       href={href} 
       target="_blank"
       className={`
-        flex flex-col items-center justify-center gap-2 p-4 rounded-xl bg-[#1a1a1c] border border-white/5 
-        hover:border-white/10 hover:bg-[#222] transition-all group
+        flex flex-col items-center justify-center gap-2 p-4 rounded-xl bg-background border border-border 
+        hover:border-primary/20 hover:bg-card-bg transition-all group
         ${fullWidth ? 'w-full flex-row' : ''}
       `}
     >
-      <div className="text-slate-400 group-hover:text-white transition-colors">{icon}</div>
-      <span className="text-xs font-medium text-slate-400 group-hover:text-white transition-colors">{label}</span>
+      <div className="text-muted-foreground group-hover:text-foreground transition-colors">{icon}</div>
+      <span className="text-xs font-medium text-muted-foreground group-hover:text-foreground transition-colors">{label}</span>
     </Link>
   );
 }

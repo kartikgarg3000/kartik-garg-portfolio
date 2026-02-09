@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { SmoothScroll } from "@/components/SmoothScroll";
+import { FeedbackWidget } from "@/components/FeedbackWidget";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -12,13 +15,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className="antialiased bg-[#0a0b10] text-[#94a3b8] relative min-h-screen font-sans"
+        className="antialiased bg-background text-foreground relative min-h-screen font-sans"
       >
-        {/* Grid Background */}
-        <div className="fixed inset-0 z-[-1] bg-grid-pattern opacity-[0.05] pointer-events-none" />
-        {children}
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+        >
+        <SmoothScroll>
+          <div className="fixed inset-0 z-[-1] bg-grid-pattern opacity-[0.05] pointer-events-none" />
+          {children}
+          <FeedbackWidget />
+        </SmoothScroll>
+        </ThemeProvider>
       </body>
     </html>
   );

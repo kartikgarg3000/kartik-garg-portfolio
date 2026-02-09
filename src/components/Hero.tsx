@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, MapPin, Mail } from "lucide-react";
 import Link from "next/link";
 import { CodeWindow } from "./CodeWindow";
+import { MagneticButton } from "./MagneticButton";
 
 export function Hero() {
   return (
@@ -24,17 +25,17 @@ export function Hero() {
 
           <div className="space-y-2">
             <p className="text-primary font-mono text-sm tracking-wide">
-              &gt;_ Hello World, I'm
+              &gt;_ Hello World, I&apos;m
             </p>
-            <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight">
+            <h1 className="text-5xl md:text-7xl font-bold text-foreground tracking-tight">
               Kartik Garg
             </h1>
-            <h2 className="text-3xl md:text-4xl font-semibold text-sky-400 tracking-tight">
+            <h2 className="text-3xl md:text-4xl font-semibold text-primary/80 tracking-tight">
               &lt;/&gt; Software Engineer & AI Focused Full Stack Developer
             </h2>
           </div>
 
-          <p className="max-w-md text-slate-400 leading-relaxed text-lg">
+          <p className="max-w-md text-foreground/70 leading-relaxed text-lg">
             I transform complex ideas into elegant, high-performance web applications. Focused on building accessible, human-centered products.
           </p>
 
@@ -44,18 +45,23 @@ export function Hero() {
           </div>
 
           <div className="flex flex-wrap gap-4 pt-4">
-            <Link
-              href="/projects"
-              className="px-8 py-3 bg-gradient-to-r from-sky-400 to-teal-400 text-slate-900 font-bold rounded-md hover:shadow-lg hover:shadow-sky-400/20 transition-all flex items-center gap-2"
-            >
-              View Projects <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link
-              href="/contact"
-              className="px-8 py-3 bg-transparent border border-slate-700 text-white rounded-md hover:border-slate-500 hover:bg-slate-800/50 transition-all flex items-center gap-2"
-            >
-              <Mail className="w-4 h-4" /> Get In Touch
-            </Link>
+            <MagneticButton>
+               <Link
+                 href="/projects"
+                 className="px-8 py-3 bg-gradient-to-r from-sky-400 to-teal-400 text-slate-900 font-bold rounded-md hover:shadow-lg hover:shadow-sky-400/20 transition-all flex items-center gap-2"
+               >
+                 View Projects <ArrowRight className="w-4 h-4" />
+               </Link>
+            </MagneticButton>
+            
+            <MagneticButton>
+               <Link
+                  href="/contact"
+                  className="px-8 py-3 bg-transparent border border-foreground/20 text-foreground rounded-md hover:border-foreground/50 hover:bg-foreground/5 transition-all flex items-center gap-2"
+                >
+                  <Mail className="w-4 h-4" /> Get In Touch
+                </Link>
+            </MagneticButton>
           </div>
 
         </motion.div>
