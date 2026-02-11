@@ -11,9 +11,9 @@ import { Search } from "lucide-react";
 const allProjects = [
   {
     title: "MoltPulse",
-    category: "WEB DEVELOPMENT",
-    description: "An advanced platform for real-time tracking and monitoring of Solana-based AI agents. Features on-chain analytics, token verification, and a comprehensive dashboard for ecosystem insights.",
-    tags: ["Next.js", "Solana", "TypeScript","Supabase","Tailwind CSS", "Framer Motion"],
+    category: "AI AGENTS",
+    description: "The first Real-Time Map of the AI Agent ecosystem. Automatically scrapes & discovers new AI agents 24/7, tracking live GitHub stats, trends, and community voting.",
+    tags: ["Next.js", "AI Agents", "TypeScript", "Supabase", "Tailwind CSS", "Web Scraping"],
     links: { 
        demo: "https://molt-pulse.vercel.app/",
        github: "https://github.com/kartikgarg3000/MoltPulse"

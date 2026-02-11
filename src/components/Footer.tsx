@@ -108,7 +108,7 @@ export function Footer() {
             </h3>
             <ul className="space-y-3">
               {[
-                { name: "Resume", href: "https://drive.google.com/file/d/1v-6sMaNOvUUD-CufNas52uYuhoCODRgi/view?usp=drive_link" },
+                { name: "Resume", href: "https://drive.google.com/file/d/19aNQfUyt4C-DMEZsRkgEVKxqlP7BkjoM/view?usp=sharing" },
                 { name: "Uses", href: "/uses" },
                 // { name: "Buy Me a Coffee", href: "#", icon: "☕" },
                 // { name: "RSS Feed", href: "#" },
