@@ -12,7 +12,7 @@ const allProjects = [
   {
     title: "MoltPulse",
     category: "AI AGENTS",
-    description: "The first Real-Time Map of the AI Agent ecosystem. Automatically scrapes & discovers new AI agents 24/7, tracking live GitHub stats, trends, and community voting.",
+    description: "The first Real-Time Map of the AI Agent ecosystem. Automatically scrapes & discovers new AI agents 24/7, tracking live GitHub stats, trends, and community voting. Achieved 5,000+ organic users (primarily Singapore-driven) and 60-70 GitHub repo clones within a 14-day period — zero paid marketing.",
     tags: ["Next.js", "AI Agents", "TypeScript", "Supabase", "Tailwind CSS", "Web Scraping"],
     links: { 
        demo: "https://molt-pulse.vercel.app/",
