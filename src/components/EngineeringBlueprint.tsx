@@ -1,112 +1,63 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Search, PenTool, Code, Rocket } from "lucide-react";
-import { RunningTerminal } from "./RunningTerminal";
+import { Database, Server, Layout, Workflow } from "lucide-react";
 
-const steps = [
+const principles = [
   {
-    icon: Search,
-    number: "01",
-    title: "Discovery & Analysis",
-    subtitle: "SYSTEM SCOPING",
-    description: "Deep-dive into requirements, user personas, and technical feasibility to define a robust project roadmap.",
-    tags: ["Requirements Eng.", "User Stories", "Tech Stack Selection"]
+    title: "Scalable Architecture",
+    description: "Designing systems that grow with your user base using microservices, serverless functions, and robust databases like PostgreSQL.",
+    icon: Server
   },
   {
-    icon: PenTool,
-    number: "02",
-    title: "System Architecture",
-    subtitle: "BLUEPRINT DESIGN",
-    description: "Designing scalable database schemas, API contracts, and component hierarchies for high-availability systems.",
-    tags: ["DB Schema", "API Design", "System Diagrams"]
+    title: "Performant UI",
+    description: "Creating lightning-fast, accessible interfaces with React, Next.js, and modern CSS techniques to ensure high user engagement.",
+    icon: Layout
   },
   {
-    icon: Code,
-    number: "03",
-    title: "Development & Iteration",
-    subtitle: "CODE CONSTRUCTION",
-    description: "Writing clean, typed, and tested code with continuous integration. Agile sprints with regular feedback loops.",
-    tags: ["React/Next.js", "TypeScript", "Clean Code"]
+    title: "Intelligent Workflows",
+    description: "Integrating AI and automated orchestration (like DAG-based engines) to streamline operations and enhance product capabilities.",
+    icon: Workflow
   },
   {
-    icon: Rocket,
-    number: "04",
-    title: "Deployment & Scaling",
-    subtitle: "LAUNCH SEQUENCE",
-    description: "Automated deployment pipelines, performance optimization, and monitoring for production-grade reliability.",
-    tags: ["CI/CD", "Docker", "Monitoring"]
+    title: "Robust Data Layer",
+    description: "Architecting efficient database schemas with ORMs (Prisma, Hibernate) ensuring data integrity, security, and fast queries.",
+    icon: Database
   }
 ];
 
 export function EngineeringBlueprint() {
   return (
-    <section className="py-24 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6">
-            
-            {/* Header */}
-            <div className="text-center mb-20">
-                <div className="inline-block px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-primary text-xs font-mono mb-6">
-                    &gt;_ EXECUTION_PROTOCOL_V2
-                </div>
-                <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-                    The Engineering <span className="text-primary">Blueprint</span>
-                </h2>
-                <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
-                    A systematic approach to building digital products. From abstract concepts to deployed, scalable solutions.
-                </p>
-            </div>
-
-            {/* Steps Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
-                {steps.map((step, index) => (
-                    <motion.div
-                        key={index}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ delay: index * 0.1 }}
-                        viewport={{ once: true }}
-                        className="bg-card-bg rounded-2xl p-6 border border-card-border hover:border-primary/30 transition-all group hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5 flex flex-col min-h-[320px]"
-                    >
-                        <div className="flex items-center justify-between mb-6">
-                            <div className="p-3 rounded-xl bg-background/50 border border-border group-hover:border-primary/50 transition-colors">
-                                <step.icon className="w-6 h-6 text-primary" />
-                            </div>
-                            <span className="font-mono text-xs text-muted-foreground group-hover:text-primary/50 transition-colors">0{index + 1}</span>
-                        </div>
-
-                        <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                            {step.title}
-                        </h3>
-                        <div className="text-[10px] font-mono text-primary/60 uppercase tracking-widest mb-4">
-                            {step.subtitle}
-                        </div>
-                        
-                        <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-grow">
-                            {step.description}
-                        </p>
-
-                        <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-card-border">
-                            {step.tags.map(tag => (
-                                <span key={tag} className="px-2 py-1 bg-background border border-border rounded text-[10px] text-muted-foreground font-medium">
-                                    {tag}
-                                </span>
-                            ))}
-                        </div>
-                    </motion.div>
-                ))}
-            </div>
-
-            {/* Terminal Section */}
-            <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.4 }}
-            >
-                <RunningTerminal />
-            </motion.div>
+    <section className="py-24 border-t border-border bg-[#050505]">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="mb-16">
+           <h2 className="text-3xl md:text-4xl font-bold font-mono uppercase tracking-widest text-primary mb-4">
+             Engineering <br/> Blueprint
+           </h2>
+           <p className="text-slate-400 max-w-2xl">
+             My approach to building software focuses on reliability, performance, and clear architectural patterns that stand the test of time.
+           </p>
         </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {principles.map((p, i) => (
+             <motion.div
+               key={i}
+               initial={{ opacity: 0, y: 20 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true }}
+               transition={{ delay: i * 0.1 }}
+               className="p-6 border border-white/5 bg-white/[0.02] rounded-2xl relative overflow-hidden group hover:border-primary/30 transition-colors hover:shadow-[0_0_30px_rgba(56,189,248,0.1)]"
+             >
+               <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform">
+                 <p.icon className="w-6 h-6" />
+               </div>
+               <h3 className="text-lg font-bold mb-3">{p.title}</h3>
+               <p className="text-sm text-slate-400 leading-relaxed">{p.description}</p>
+             </motion.div>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }

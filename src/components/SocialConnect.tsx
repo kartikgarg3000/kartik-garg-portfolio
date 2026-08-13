@@ -1,88 +1,37 @@
 "use client";
 
-import { Github, Linkedin, Twitter, Instagram, Code2, Music, Coffee, ArrowUpRight } from "lucide-react";
-import Link from "next/link";
 import { motion } from "framer-motion";
+import { Github, Linkedin, Mail, ExternalLink } from "lucide-react";
+import Link from "next/link";
 
 export function SocialConnect() {
   return (
     <section className="py-24 max-w-7xl mx-auto px-6">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="bg-card-bg border border-card-border rounded-3xl p-12 text-center relative overflow-hidden shadow-[0_0_50px_rgba(56,189,248,0.05)] hover:shadow-[0_0_50px_rgba(56,189,248,0.1)] transition-shadow duration-500">
+        <div className="absolute inset-0 bg-primary/5 blur-3xl rounded-full translate-y-1/2" />
         
-        {/* Current Focus Card */}
-        <motion.div 
-          whileHover={{ y: -5 }}
-          className="bg-card-bg p-8 rounded-2xl border border-card-border relative overflow-hidden group"
-        >
-          <div className="absolute top-0 right-0 p-6 opacity-50 group-hover:opacity-100 transition-opacity">
-            <ArrowUpRight className="w-5 h-5 text-orange-500" />
-          </div>
-          <div className="w-12 h-12 bg-orange-500/10 rounded-full flex items-center justify-center mb-6 text-orange-500">
-             <Coffee className="w-6 h-6" />
-          </div>
-          <h4 className="text-orange-500 text-xs font-bold tracking-wider mb-2">CURRENT FOCUS</h4>
-          <p className="text-xl font-bold text-foreground leading-snug">
-            Architecting Scalable Systems & AI Agents
-          </p>
-        </motion.div>
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 relative z-10">
+          Let's Build Something <span className="text-primary">Amazing</span>
+        </h2>
+        <p className="text-slate-400 max-w-xl mx-auto mb-10 relative z-10">
+          I'm currently open to new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+        </p>
 
-        {/* Coding Vibe Card */}
-        <motion.div 
-          whileHover={{ y: -5 }}
-          className="bg-card-bg p-8 rounded-2xl border border-card-border relative overflow-hidden group"
-        >
-          <div className="absolute top-0 right-0 p-6 opacity-50 group-hover:opacity-100 transition-opacity">
-            <div className="flex gap-1 items-end h-4">
-               <span className="w-1 h-2 bg-purple-500 animate-pulse" />
-               <span className="w-1 h-4 bg-purple-500 animate-pulse delay-75" />
-               <span className="w-1 h-3 bg-purple-500 animate-pulse delay-150" />
-            </div>
-          </div>
-          <div className="w-12 h-12 bg-purple-500/10 rounded-full flex items-center justify-center mb-6 text-purple-500">
-             <Music className="w-6 h-6" />
-          </div>
-          <h4 className="text-purple-500 text-xs font-bold tracking-wider mb-2">CODING VIBE</h4>
-          <p className="text-xl font-bold text-foreground leading-snug">
-            Lo-Fi Beats to Code/Relax To
-          </p>
-          <p className="text-sm text-slate-500 mt-1">Spotify • Lofi Girl</p>
-        </motion.div>
-
-        {/* Let's Connect Grid */}
-        <div className="bg-card-bg p-8 rounded-2xl border border-card-border">
-           <h4 className="text-foreground text-lg font-bold mb-6 border-l-4 border-primary pl-3 flex items-center gap-2">
-             Let's Connect
-           </h4>
-           
-           <div className="grid grid-cols-2 gap-4">
-              <SocialLink icon={<Github className="w-5 h-5" />} label="GitHub" href="https://github.com/kartikgarg3000" />
-              <SocialLink icon={<Linkedin className="w-5 h-5" />} label="LinkedIn" href="https://www.linkedin.com/in/kartik-garg-a01027231/" />
-              <SocialLink icon={<Twitter className="w-5 h-5" />} label="X (Twitter)" href="https://x.com/Kartik_sui" />
-           </div>
-           
-           <div className="mt-4">
-              <SocialLink icon={<Code2 className="w-5 h-5" />} label="LeetCode" href="https://leetcode.com/u/Kartikgarg___/" fullWidth />
-           </div>
+        <div className="flex flex-wrap justify-center gap-6 relative z-10">
+          <Link href="https://github.com/kartikgarg3000" target="_blank" className="flex items-center gap-3 px-6 py-3 rounded-full border border-border hover:border-primary/50 bg-background hover:bg-primary/10 transition-all group">
+            <Github className="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors" />
+            <span className="font-medium group-hover:text-primary transition-colors">GitHub</span>
+          </Link>
+          <Link href="https://www.linkedin.com/in/kartik-garg-a01027231/" target="_blank" className="flex items-center gap-3 px-6 py-3 rounded-full border border-border hover:border-primary/50 bg-background hover:bg-primary/10 transition-all group">
+            <Linkedin className="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors" />
+            <span className="font-medium group-hover:text-primary transition-colors">LinkedIn</span>
+          </Link>
+          <Link href="mailto:kartikgarg.cse.2025@gmail.com" className="flex items-center gap-3 px-6 py-3 rounded-full border border-border hover:border-primary/50 bg-background hover:bg-primary/10 transition-all group">
+            <Mail className="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors" />
+            <span className="font-medium group-hover:text-primary transition-colors">Email Me</span>
+          </Link>
         </div>
-
       </div>
     </section>
-  );
-}
-
-function SocialLink({ icon, label, href, fullWidth = false }: { icon: React.ReactNode, label: string, href: string, fullWidth?: boolean }) {
-  return (
-    <Link 
-      href={href} 
-      target="_blank"
-      className={`
-        flex flex-col items-center justify-center gap-2 p-4 rounded-xl bg-background border border-border 
-        hover:border-primary/20 hover:bg-card-bg transition-all group
-        ${fullWidth ? 'w-full flex-row' : ''}
-      `}
-    >
-      <div className="text-muted-foreground group-hover:text-foreground transition-colors">{icon}</div>
-      <span className="text-xs font-medium text-muted-foreground group-hover:text-foreground transition-colors">{label}</span>
-    </Link>
   );
 }

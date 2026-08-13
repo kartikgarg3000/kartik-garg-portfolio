@@ -31,14 +31,7 @@ export default function BlogPage() {
          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-primary/5 blur-[120px] -z-10 rounded-full" />
          
          <div className="max-w-4xl mx-auto text-center space-y-6">
-            <motion.div 
-               initial={{ opacity: 0, y: 20 }}
-               animate={{ opacity: 1, y: 0 }}
-               className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-medium font-mono"
-            >
-               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-               THE BLOG
-            </motion.div>
+    
             
             <motion.h1 
                initial={{ opacity: 0, y: 20 }}

@@ -17,11 +17,7 @@ export function Hero() {
           transition={{ duration: 0.5 }}
           className="space-y-6"
         >
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium font-mono">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            Available for work
-          </div>
+      
 
           <div className="space-y-2">
             <p className="text-primary font-mono text-sm tracking-wide">
@@ -31,17 +27,17 @@ export function Hero() {
               Kartik Garg
             </h1>
             <h2 className="text-3xl md:text-4xl font-semibold text-primary/80 tracking-tight">
-              &lt;/&gt; Software Engineer & AI Focused Full Stack Developer
+              &lt;/&gt; Software Engineer
             </h2>
           </div>
 
           <p className="max-w-md text-foreground/70 leading-relaxed text-lg">
-            I transform complex ideas into elegant, high-performance web applications. Focused on building accessible, human-centered products.
+            Full Stack Engineer specializing in Java, Spring Boot, React, and Next.js. I transform complex ideas into elegant, scalable web applications.
           </p>
 
           <div className="flex items-center gap-2 text-slate-500 font-mono text-sm">
             <MapPin className="w-4 h-4 text-primary" />
-            <span>India</span>
+            <span>Noida, India</span>
           </div>
 
           <div className="flex flex-wrap gap-4 pt-4">

@@ -5,31 +5,29 @@ import { Briefcase } from "lucide-react";
 
 const experiences = [
   {
-    company: "SR Group",
-    role: "Freelance Web Developer",
-    date: "Nov 2025 - Jan 2026",
+    company: "Self-Employed",
+    role: "Freelance Full Stack Developer",
+    date: "Nov 2025 – Jan 2026",
     location: "Remote",
-    description: "Designed and developed a production-ready corporate website using Next.js App Router and Tailwind CSS for a multi-vertical business.",
+    description: "Architected and deployed a production Next.js corporate website with Sanity CMS.",
     achievements: [
-        "Integrated Sanity Headless CMS, enabling non-technical teams to independently manage 50+ products and content.",
-        "Implemented server-side data fetching, GROQ queries, and image optimization, improving page load performance by 40%.",
-        "Delivered an SEO-friendly, scalable solution deployed on Vercel."
+        "Architected and deployed a production Next.js corporate website with Sanity CMS, enabling client to independently manage 50+ product listings via GROQ queries and server-side rendering.",
+        "Improved page load performance by 40% through image optimization, lazy loading, and efficient server-side data fetching strategies."
     ],
-    tags: ["Next.js", "React.js", "Tailwind CSS", "Sanity CMS", "Vercel"]
+    tags: ["Next.js", "Sanity CMS", "React", "GROQ", "Server-Side Rendering"]
   },
   {
-    company: "Stratawiz",
-    role: "Software Developer (Internship)",
-    date: "Oct 2024 - Mar 2025",
+    company: "Stratawiz Technologies (Rapport)",
+    role: "Software Developer Intern",
+    date: "Oct 2024 – Mar 2025",
     location: "Remote",
-    description: "Worked on backend development using Node.js, AWS Lambda, and DynamoDB to build scalable, production-ready features.",
+    description: "Engineered robust backend solutions and optimized campaign workflows.",
     achievements: [
-        "Implemented WhatsApp API-based campaign messaging, improving communication workflows across the platform.",
-        "Optimized backend logic and APIs, reducing server response times by ~25%.",
-        "Redesigned bot interaction flows, achieving ~90% message processing accuracy.",
-        "Collaborated with cross-functional teams to develop, test, and deploy modular campaign features."
+        "Engineered WhatsApp Business API integration using Node.js and AWS Lambda for automated campaign messaging, eliminating 50+ hours of manual work weekly across marketing operations.",
+        "Optimized campaign management backend by refactoring data layer and defining API contracts, achieving 25% performance improvement across core workflows.",
+        "Improved bot message processing pipeline by optimizing workflow execution and validation logic, enhancing production reliability and reducing manual intervention."
     ],
-    tags: ["Node.js", "AWS Lambda", "DynamoDB", "API Development"]
+    tags: ["Node.js", "AWS Lambda", "API Development", "Workflow Optimization"]
   }
 ];
 
@@ -37,9 +35,7 @@ export function ExperienceTimeline() {
   return (
     <section className="py-24 max-w-4xl mx-auto px-6">
       <div className="text-center mb-16">
-          <div className="inline-block px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-primary text-xs font-mono mb-4">
-            Briefcase EXPERIENCE
-          </div>
+  
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
             Professional <span className="text-primary">Journey</span>
           </h2>

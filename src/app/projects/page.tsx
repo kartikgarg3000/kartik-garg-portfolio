@@ -10,12 +10,34 @@ import { Search } from "lucide-react";
 // Using the same project data or expanded list
 const allProjects = [
   {
+    title: "FinSight AI",
+    category: "WEB DEVELOPMENT",
+    description: "A full-stack payment intelligence platform with Spring Boot REST APIs on the backend and a React/Next.js dashboard for merchant transaction analytics and fraud monitoring. Features JWT-based role access and PostgreSQL-backed real-time data visualization.",
+    tags: ["Spring Boot", "React", "Next.js", "TypeScript", "PostgreSQL", "JWT"],
+    links: {
+       demo: "https://fin-sight-ai-lovat-three.vercel.app/",
+       github: "https://github.com/kartikgarg3000"
+    },
+    image: "/projects/finsight.png"
+  },
+  {
+    title: "NextFlow",
+    category: "AI AGENTS",
+    description: "A visual workflow automation platform using React Flow with drag-and-drop node connections, DAG-based execution engine, and real-time progress indicators. Features Prisma + PostgreSQL persistence and an LLM execution layer with Gemini + Groq fallback.",
+    tags: ["Next.js", "TypeScript", "React Flow", "Prisma", "PostgreSQL"],
+    links: {
+       demo: "https://nextflow-galaxyai-two.vercel.app/",
+       github: "https://github.com/kartikgarg3000/nextflow-galaxyai"
+    },
+    image: "/projects/nextflow.png"
+  },
+  {
     title: "MoltPulse",
     category: "AI AGENTS",
     description: "The first Real-Time Map of the AI Agent ecosystem. Automatically scrapes & discovers new AI agents 24/7, tracking live GitHub stats, trends, and community voting. Achieved 5,000+ organic users (primarily Singapore-driven) and 60-70 GitHub repo clones within a 14-day period — zero paid marketing.",
     tags: ["Next.js", "AI Agents", "TypeScript", "Supabase", "Tailwind CSS", "Web Scraping"],
     links: { 
-       demo: "https://molt-pulse.vercel.app/",
+       demo: "https://molt-pulse.com/",
        github: "https://github.com/kartikgarg3000/MoltPulse"
     },
     image: "/projects/moltpulse.png"

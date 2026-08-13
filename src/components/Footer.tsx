@@ -89,8 +89,8 @@ export function Footer() {
                 { name: "Home", href: "/" },
                 { name: "About", href: "/about" },
                 { name: "Projects", href: "/projects" },
-                { name: "Blogs", href: "/blogs" },
-                { name: "Contact", href: "#contact" },
+                { name: "Blogs", href: "/blog" },
+                { name: "Contact", href: "/contact" },
               ].map((link) => (
                 <li key={link.name}>
                   <Link href={link.href} className="text-muted-foreground hover:text-primary transition-colors text-sm">
@@ -108,7 +108,7 @@ export function Footer() {
             </h3>
             <ul className="space-y-3">
               {[
-                { name: "Resume", href: "https://drive.google.com/file/d/1ZulF0ytPXUsagQCCJaMQn10GJGJOvE4e/view?usp=drive_link" },
+                { name: "Resume", href: "https://drive.google.com/file/d/1UNxjspJooXke-BsaDjH00d8ktCdJUHbp/view?usp=sharing" },
                 { name: "Uses", href: "/uses" },
                 // { name: "Buy Me a Coffee", href: "#", icon: "☕" },
                 // { name: "RSS Feed", href: "#" },

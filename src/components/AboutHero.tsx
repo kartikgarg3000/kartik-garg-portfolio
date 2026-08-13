@@ -16,10 +16,7 @@ export function AboutHero() {
            transition={{ duration: 0.5 }}
            className="space-y-6 order-2 md:order-1"
         >
-           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-medium font-mono">
-             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-             ABOUT ME
-           </div>
+
            
            <h1 className="text-5xl md:text-7xl font-bold text-foreground tracking-tight">
              I&apos;m <span className="text-primary">Kartik Garg</span>

@@ -52,8 +52,9 @@ const categories: ToolCategory[] = [
     description: "The foundation of my development stack",
     icon: Code2,
     items: [
-      { name: "JavaScript", description: "Primary language for frontend & backend. ES6+ features.", icon: FileCode },
-      { name: "TypeScript", description: "Strongly typed JavaScript for scalable applications.", icon: FileCode },
+      { name: "JavaScript / TypeScript", description: "Primary languages for modern web applications.", icon: FileCode },
+      { name: "Java", description: "Robust object-oriented language for enterprise backends.", icon: FileCode },
+      { name: "SQL", description: "Structured Query Language for relational data.", icon: Database },
       { name: "HTML5 & CSS3", description: "Semantic markup and modern CSS (Flexbox, Grid).", icon: Layout },
     ]
   },
@@ -62,10 +63,10 @@ const categories: ToolCategory[] = [
     description: "Building blocks for scalable applications",
     icon: Atom,
     items: [
-      { name: "React.js", description: "Library for building interactive UIs.", icon: Atom },
-      { name: "Next.js", description: "Full-stack React framework with SSR & API routes.", icon: Zap },
-      { name: "Redux Toolkit", description: "State management for complex apps.", icon: Database },
-      { name: "Tailwind CSS", description: "Utility-first CSS framework for rapid UI.", icon: Wind },
+      { name: "Next.js & React", description: "Full-stack framework and UI library for dynamic apps.", icon: Atom },
+      { name: "Spring Boot", description: "Powerful Java framework for building REST APIs.", icon: ServerCog },
+      { name: "React Flow", description: "Library for building node-based UIs and workflows.", icon: Move },
+      { name: "Tailwind CSS & shadcn/ui", description: "Utility-first CSS and beautiful accessible components.", icon: Wind },
       { name: "Framer Motion", description: "Production-ready animations for React.", icon: Move },
     ]
   },
@@ -76,9 +77,9 @@ const categories: ToolCategory[] = [
     items: [
       { name: "VS Code", description: "Primary editor with ESLint, Prettier, GitLens.", icon: Code },
       { name: "Git & GitHub", description: "Version control and collaboration.", icon: GitBranch },
-      { name: "Chrome DevTools", description: "Debugging and performance analysis.", icon: Monitor },
+      { name: "Docker", description: "Containerization for consistent environments.", icon: Package },
       { name: "Postman", description: "API testing and documentation.", icon: Send },
-      { name: "npm", description: "Package manager for dependencies and scripts.", icon: Package },
+      { name: "npm / pnpm", description: "Package managers for dependencies and scripts.", icon: Package },
     ]
   },
   {
@@ -96,9 +97,10 @@ const categories: ToolCategory[] = [
     description: "Server-side technologies I work with",
     icon: Server,
     items: [
-      { name: "Node.js", description: "JavaScript runtime for server-side apps.", icon: Server },
-      { name: "Express.js", description: "Minimal web framework for REST APIs.", icon: ServerCog },
-      { name: "REST APIs", description: "Designing and consuming RESTful APIs.", icon: Globe },
+      { name: "Node.js & Express", description: "JavaScript runtime and framework for server-side apps.", icon: Server },
+      { name: "PostgreSQL", description: "Advanced open source relational database.", icon: Database },
+      { name: "Prisma ORM", description: "Next-generation Node.js and TypeScript ORM.", icon: Database },
+      { name: "Supabase", description: "Open source Firebase alternative with PostgreSQL.", icon: Cloud },
       { name: "MongoDB", description: "NoSQL database with Mongoose ODM.", icon: Database },
     ]
   },

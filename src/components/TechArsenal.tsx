@@ -3,9 +3,11 @@
 import { motion } from "framer-motion";
 
 const techs = [
- "Taiwind CSS", "Framer Motion", "JavaScript","React", 
-  "Next.js", "TypeScript", "Node.js", "Express", "MongoDB", "PostgreSQL",
-   "Git", "AI", "Auth", "Docker", "AWS"
+  "Java", "C++", "JavaScript", "TypeScript", "SQL", "HTML/CSS",
+  "React.js", "Next.js", "Tailwind CSS", "shadcn/ui", "React Flow", "Recharts",
+  "Spring Boot", "Node.js", "Express.js", "REST APIs", "JWT",
+  "PostgreSQL", "MongoDB", "Prisma ORM", "Supabase",
+  "Git", "Docker", "Vercel", "Postman"
 ];
 
 export function TechArsenal() {
